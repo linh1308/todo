@@ -1,0 +1,43 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+
+    &__title {
+        font-size: 15px;
+    }
+
+    &__finish {
+        text-decoration: line-through;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        height: 1px;
+        background-color: #333;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 15px;
+        
+        &__remove {
+            font-size: 15px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+    
+        &__edit {
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+}
